@@ -1,4 +1,4 @@
-﻿namespace AppTransportePassageiros
+﻿namespace Domain
 {
     partial class Form1
     {

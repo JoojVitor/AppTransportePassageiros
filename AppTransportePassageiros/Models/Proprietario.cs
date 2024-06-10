@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppTransportePassageiros
+namespace Domain
 {
-    class Motorista
+    public class Proprietario
     {
         public long Cpf { get; set; }
         public string Cnh { get; set; }

@@ -6,12 +6,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{906693F7-C529-44F3-980D-16B49E9F1373}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AppTransportePassageiros</RootNamespace>
-    <AssemblyName>AppTransportePassageiros</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -102,17 +103,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Motorista.cs" />
-    <Compile Include="Passageiro.cs" />
-    <Compile Include="PassageiroController.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="PessoaController.cs" />
+    <Compile Include="Models\Motorista.cs" />
+    <Compile Include="Models\Passageiro.cs" />
+    <Compile Include="Controllers\PassageiroController.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proprietario.cs" />
-    <Compile Include="TipoPagamento.cs" />
-    <Compile Include="Veiculo.cs" />
-    <Compile Include="Viagem.cs" />
+    <Compile Include="Models\Proprietario.cs" />
+    <Compile Include="Models\TipoPagamento.cs" />
+    <Compile Include="Models\Veiculo.cs" />
+    <Compile Include="Models\Viagem.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

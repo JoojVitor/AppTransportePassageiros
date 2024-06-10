@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppTransportePassageiros
+namespace Domain
 {
-    class TipoPagamento
+    public class TipoPagamento
     {
         public int CodPagto { get; set; }
         public string DescPagto { get; set; }

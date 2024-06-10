@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppTransportePassageiros
+namespace Domain
 {
-    enum Sexo
+    public enum Sexo
     {
         M,  // Masculino
         F   // Feminino
     }
 
-    class Pessoa
+    public class Pessoa
     {
         public long Cpf { get; set; }
         public string Nome { get; set; }

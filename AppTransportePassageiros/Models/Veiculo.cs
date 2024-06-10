@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppTransportePassageiros
+namespace Domain
 {
-    enum Combustivel
+    public enum Combustivel
     {
         G,  // Gasolina
         A,  // Alcool
@@ -14,7 +14,7 @@ namespace AppTransportePassageiros
         F   // Flex
     }
 
-    class Veiculo
+    public class Veiculo
     {
         public string Placa { get; set; }
         public string Marca { get; set; }

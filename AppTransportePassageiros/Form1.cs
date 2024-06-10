@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AppTransportePassageiros
+namespace Domain
 {
     public partial class Form1 : Form
     {

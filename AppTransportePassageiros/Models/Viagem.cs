@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppTransportePassageiros
+namespace Domain
 {
-    enum Cancelamento
+    public enum Cancelamento
     {
         S,  // Sim
         N   // Não
     }
 
-    class Viagem
+    public class Viagem
     {
         public Passageiro Passageiro { get; set; }
         public Motorista Motorista { get; set; }
