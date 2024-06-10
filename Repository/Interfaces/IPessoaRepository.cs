@@ -6,6 +6,6 @@ namespace Repository.Interfaces
     public interface IPessoaRepository : IBaseRepository
     {
         IEnumerable<Pessoa> Get();
-        Pessoa Get(int id);
+        Pessoa Get(long id);
     }
 }

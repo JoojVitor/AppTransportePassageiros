@@ -13,12 +13,16 @@ namespace Repository.Interfaces
 
         public IEnumerable<Pessoa> Get()
         {
-            throw new NotImplementedException();
+            PessoaController pessoaController = new PessoaController();
+
+            return pessoaController.GetAllPessoas();
         }
 
-        public Pessoa Get(int id)
+        public Pessoa Get(long cpf)
         {
-            throw new NotImplementedException();
+            PessoaController pessoaController = new PessoaController();
+
+            return pessoaController.GetPessoa(cpf);
         }
     }
 }
