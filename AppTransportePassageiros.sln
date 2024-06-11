@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "AppTransportePassageiros\Domain.csproj", "{906693F7-C529-44F3-980D-16B49E9F1373}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{ECEEA6C7-1EBE-4AFD-9D11-41BC2C770864}"
-	ProjectSection(ProjectDependencies) = postProject
-		{906693F7-C529-44F3-980D-16B49E9F1373} = {906693F7-C529-44F3-980D-16B49E9F1373}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

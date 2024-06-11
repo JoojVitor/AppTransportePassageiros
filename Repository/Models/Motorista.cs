@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain
+﻿namespace Repository.Models
 {
-    public class Proprietario
+    public class Motorista
     {
         public long Cpf { get; set; }
         public string Cnh { get; set; }

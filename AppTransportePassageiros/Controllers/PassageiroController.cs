@@ -1,36 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Repository;
+using Repository.Models;
 
 namespace Domain
 {
-    class PassageiroController
+    public class PassageiroController
     {
+        readonly PassageiroRepository _passageiroRepository = new PassageiroRepository();
+
         public void CreatePassageiro(Passageiro passageiro)
         {
-            
+            _passageiroRepository.Create(passageiro);
         }
 
         public List<Passageiro> GetAllPassageiros()
         {
-            throw new NotImplementedException();
+           return _passageiroRepository.Get().ToList();
         }
 
         public Passageiro GetPassageiro(long cpf)
         {
-            throw new NotImplementedException();
+            return _passageiroRepository.Get(cpf);
         }
 
         public void UpdatePassageiro(Passageiro passageiro)
         {
-            
+            _passageiroRepository.Update(passageiro);
         }
 
         public void DeletePassageiro(long cpf)
         {
-            
+            _passageiroRepository.Delete(cpf);
         }
     }
 }

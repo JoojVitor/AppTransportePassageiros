@@ -1,36 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Repository.Interfaces;
+using Repository.Models;
 
 namespace Domain
 {
     public class PessoaController
     {
+        readonly PessoaRepository _pessoaRepository = new PessoaRepository();
+
         public void CreatePessoa(Pessoa pessoa)
         {
-            
+            _pessoaRepository.Add(pessoa);
         }
 
         public List<Pessoa> GetAllPessoas()
         {
-            throw new NotImplementedException();
+            return _pessoaRepository.Get().ToList();
         }
 
         public Pessoa GetPessoa(long cpf)
         {
-            throw new NotImplementedException();
+            return _pessoaRepository.Get(cpf);
         }
 
         public void UpdatePessoa(Pessoa pessoa)
         {
-            
+            _pessoaRepository.Update(pessoa);
         }
 
         public void DeletePessoa(long cpf)
         {
-            
+            _pessoaRepository.Delete(cpf);
         }
     }
 }

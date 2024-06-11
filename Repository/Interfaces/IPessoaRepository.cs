@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Domain;
+﻿using Repository.Models;
+using System.Collections.Generic;
 
 namespace Repository.Interfaces
 {

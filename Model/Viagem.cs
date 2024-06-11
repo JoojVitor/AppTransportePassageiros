@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain
+﻿namespace Model
 {
     public enum Cancelamento
     {
@@ -19,8 +13,8 @@ namespace Domain
         public Veiculo Veiculo { get; set; }
         public string LocalOrigem { get; set; }
         public string LocalDestino { get; set; }
-        public DateTime DtHoraInicio { get; set; }
-        public DateTime? DtHoraFim { get; set; }
+        public System.DateTime DtHoraInicio { get; set; }
+        public System.DateTime? DtHoraFim { get; set; }
         public int? QtdePass { get; set; }
         public TipoPagamento FormaPagto { get; set; }
         public decimal? ValorPagto { get; set; }
