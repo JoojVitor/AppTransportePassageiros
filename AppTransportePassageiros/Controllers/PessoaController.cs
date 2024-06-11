@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Repository.Interfaces;
+using Repository;
 using Repository.Models;
 
 namespace Domain
@@ -12,7 +12,7 @@ namespace Domain
 
         public void CreatePessoa(Pessoa pessoa)
         {
-            _pessoaRepository.Add(pessoa);
+            _pessoaRepository.Create(pessoa);
         }
 
         public List<Pessoa> GetAllPessoas()

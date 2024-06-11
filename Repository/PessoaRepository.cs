@@ -2,8 +2,9 @@
 using System;
 using System.Collections.Generic;
 using Repository.Models;
+using Repository.Interfaces;
 
-namespace Repository.Interfaces
+namespace Repository
 {
     public class PessoaRepository : BaseRepository, IPessoaRepository
     {
