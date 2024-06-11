@@ -90,12 +90,12 @@
             this.txtCidadeOrigemCadastrar = new System.Windows.Forms.TextBox();
             this.cartaoCreditoCadastroLabel = new System.Windows.Forms.Label();
             this.cidadeOrigemLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtPlacaVeiculos = new System.Windows.Forms.TextBox();
+            this.txtMarcaVeiculos = new System.Windows.Forms.TextBox();
+            this.txtModeloVeiculos = new System.Windows.Forms.TextBox();
+            this.txtAnoVeiculos = new System.Windows.Forms.TextBox();
+            this.txtCorVeiculos = new System.Windows.Forms.TextBox();
+            this.txtPotenciaMotorVeiculos = new System.Windows.Forms.TextBox();
             this.placaVeiculoLabel = new System.Windows.Forms.Label();
             this.marcaVeiculoLabel = new System.Windows.Forms.Label();
             this.modeloVeiculoLabel = new System.Windows.Forms.Label();
@@ -104,8 +104,8 @@
             this.corVeiculoLabel = new System.Windows.Forms.Label();
             this.tipoCombustivelVeiculoLabel = new System.Windows.Forms.Label();
             this.potenciaVeiculoLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbCapacidadeVeiculos = new System.Windows.Forms.ComboBox();
+            this.cbTipoCombustivelVeiculos = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.placaVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -579,6 +579,7 @@
             this.cancelamento_HistGrid});
             this.historicoGrid.Location = new System.Drawing.Point(6, 54);
             this.historicoGrid.Name = "historicoGrid";
+            this.historicoGrid.ReadOnly = true;
             this.historicoGrid.Size = new System.Drawing.Size(861, 346);
             this.historicoGrid.TabIndex = 0;
             // 
@@ -652,8 +653,8 @@
             // 
             this.Veiculos.Controls.Add(this.dataGridView1);
             this.Veiculos.Controls.Add(this.button1);
-            this.Veiculos.Controls.Add(this.comboBox2);
-            this.Veiculos.Controls.Add(this.comboBox1);
+            this.Veiculos.Controls.Add(this.cbTipoCombustivelVeiculos);
+            this.Veiculos.Controls.Add(this.cbCapacidadeVeiculos);
             this.Veiculos.Controls.Add(this.potenciaVeiculoLabel);
             this.Veiculos.Controls.Add(this.tipoCombustivelVeiculoLabel);
             this.Veiculos.Controls.Add(this.corVeiculoLabel);
@@ -662,12 +663,12 @@
             this.Veiculos.Controls.Add(this.modeloVeiculoLabel);
             this.Veiculos.Controls.Add(this.marcaVeiculoLabel);
             this.Veiculos.Controls.Add(this.placaVeiculoLabel);
-            this.Veiculos.Controls.Add(this.textBox8);
-            this.Veiculos.Controls.Add(this.textBox6);
-            this.Veiculos.Controls.Add(this.textBox4);
-            this.Veiculos.Controls.Add(this.textBox3);
-            this.Veiculos.Controls.Add(this.textBox2);
-            this.Veiculos.Controls.Add(this.textBox1);
+            this.Veiculos.Controls.Add(this.txtPotenciaMotorVeiculos);
+            this.Veiculos.Controls.Add(this.txtCorVeiculos);
+            this.Veiculos.Controls.Add(this.txtAnoVeiculos);
+            this.Veiculos.Controls.Add(this.txtModeloVeiculos);
+            this.Veiculos.Controls.Add(this.txtMarcaVeiculos);
+            this.Veiculos.Controls.Add(this.txtPlacaVeiculos);
             this.Veiculos.Location = new System.Drawing.Point(4, 22);
             this.Veiculos.Name = "Veiculos";
             this.Veiculos.Size = new System.Drawing.Size(873, 406);
@@ -707,47 +708,47 @@
             this.cidadeOrigemLabel.TabIndex = 21;
             this.cidadeOrigemLabel.Text = "Cidade de Origem";
             // 
-            // textBox1
+            // txtPlacaVeiculos
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPlacaVeiculos.Location = new System.Drawing.Point(7, 27);
+            this.txtPlacaVeiculos.Name = "txtPlacaVeiculos";
+            this.txtPlacaVeiculos.Size = new System.Drawing.Size(99, 20);
+            this.txtPlacaVeiculos.TabIndex = 1;
             // 
-            // textBox2
+            // txtMarcaVeiculos
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtMarcaVeiculos.Location = new System.Drawing.Point(112, 27);
+            this.txtMarcaVeiculos.Name = "txtMarcaVeiculos";
+            this.txtMarcaVeiculos.Size = new System.Drawing.Size(100, 20);
+            this.txtMarcaVeiculos.TabIndex = 2;
             // 
-            // textBox3
+            // txtModeloVeiculos
             // 
-            this.textBox3.Location = new System.Drawing.Point(218, 27);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtModeloVeiculos.Location = new System.Drawing.Point(218, 27);
+            this.txtModeloVeiculos.Name = "txtModeloVeiculos";
+            this.txtModeloVeiculos.Size = new System.Drawing.Size(100, 20);
+            this.txtModeloVeiculos.TabIndex = 3;
             // 
-            // textBox4
+            // txtAnoVeiculos
             // 
-            this.textBox4.Location = new System.Drawing.Point(324, 27);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(65, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtAnoVeiculos.Location = new System.Drawing.Point(324, 27);
+            this.txtAnoVeiculos.Name = "txtAnoVeiculos";
+            this.txtAnoVeiculos.Size = new System.Drawing.Size(65, 20);
+            this.txtAnoVeiculos.TabIndex = 4;
             // 
-            // textBox6
+            // txtCorVeiculos
             // 
-            this.textBox6.Location = new System.Drawing.Point(462, 26);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(91, 20);
-            this.textBox6.TabIndex = 6;
+            this.txtCorVeiculos.Location = new System.Drawing.Point(462, 26);
+            this.txtCorVeiculos.Name = "txtCorVeiculos";
+            this.txtCorVeiculos.Size = new System.Drawing.Size(91, 20);
+            this.txtCorVeiculos.TabIndex = 6;
             // 
-            // textBox8
+            // txtPotenciaMotorVeiculos
             // 
-            this.textBox8.Location = new System.Drawing.Point(664, 26);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(91, 20);
-            this.textBox8.TabIndex = 8;
+            this.txtPotenciaMotorVeiculos.Location = new System.Drawing.Point(664, 26);
+            this.txtPotenciaMotorVeiculos.Name = "txtPotenciaMotorVeiculos";
+            this.txtPotenciaMotorVeiculos.Size = new System.Drawing.Size(91, 20);
+            this.txtPotenciaMotorVeiculos.TabIndex = 8;
             // 
             // placaVeiculoLabel
             // 
@@ -821,21 +822,21 @@
             this.potenciaVeiculoLabel.TabIndex = 1;
             this.potenciaVeiculoLabel.Text = "Potência do Motor";
             // 
-            // comboBox1
+            // cbCapacidadeVeiculos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(395, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(61, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cbCapacidadeVeiculos.FormattingEnabled = true;
+            this.cbCapacidadeVeiculos.Location = new System.Drawing.Point(395, 26);
+            this.cbCapacidadeVeiculos.Name = "cbCapacidadeVeiculos";
+            this.cbCapacidadeVeiculos.Size = new System.Drawing.Size(61, 21);
+            this.cbCapacidadeVeiculos.TabIndex = 5;
             // 
-            // comboBox2
+            // cbTipoCombustivelVeiculos
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(559, 26);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(99, 21);
-            this.comboBox2.TabIndex = 7;
+            this.cbTipoCombustivelVeiculos.FormattingEnabled = true;
+            this.cbTipoCombustivelVeiculos.Location = new System.Drawing.Point(559, 26);
+            this.cbTipoCombustivelVeiculos.Name = "cbTipoCombustivelVeiculos";
+            this.cbTipoCombustivelVeiculos.Size = new System.Drawing.Size(99, 21);
+            this.cbTipoCombustivelVeiculos.TabIndex = 7;
             // 
             // button1
             // 
@@ -850,6 +851,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.placaVeiculoGridCol,
@@ -1004,7 +1006,7 @@
         private System.Windows.Forms.TextBox txtCidadeOrigemCadastrar;
         private System.Windows.Forms.TextBox txtCartaoCreditoCadastrar;
         private System.Windows.Forms.Label cidadeOrigemLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPlacaVeiculos;
         private System.Windows.Forms.Label potenciaVeiculoLabel;
         private System.Windows.Forms.Label tipoCombustivelVeiculoLabel;
         private System.Windows.Forms.Label corVeiculoLabel;
@@ -1013,14 +1015,14 @@
         private System.Windows.Forms.Label modeloVeiculoLabel;
         private System.Windows.Forms.Label marcaVeiculoLabel;
         private System.Windows.Forms.Label placaVeiculoLabel;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPotenciaMotorVeiculos;
+        private System.Windows.Forms.TextBox txtCorVeiculos;
+        private System.Windows.Forms.TextBox txtAnoVeiculos;
+        private System.Windows.Forms.TextBox txtModeloVeiculos;
+        private System.Windows.Forms.TextBox txtMarcaVeiculos;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbTipoCombustivelVeiculos;
+        private System.Windows.Forms.ComboBox cbCapacidadeVeiculos;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn placaVeiculoGridCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaVeiculoGridCol;
