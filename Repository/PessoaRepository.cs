@@ -143,7 +143,7 @@ namespace Repository
                 dbConnection.OpenConnection(connection);
 
                 var query = "UPDATE PESSOAS SET nome = @Nome, endereco = @Endereco," +
-                            "telefone = @Telefone, sexo = @Sexo, email = @Email" +
+                            "telefone = @Telefone, sexo = @Sexo, email = @Email " +
                             "WHERE cpf_pessoa = @Cpf";
 
                 using (var cmd = new NpgsqlCommand(query, connection))

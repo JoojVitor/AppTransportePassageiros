@@ -85,16 +85,53 @@
             this.formaPagto_HistGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor_HistGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cancelamento_HistGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Veiculos = new System.Windows.Forms.TabPage();
+            this.txtCartaoCreditoCadastrar = new System.Windows.Forms.TextBox();
+            this.txtCidadeOrigemCadastrar = new System.Windows.Forms.TextBox();
+            this.cartaoCreditoCadastroLabel = new System.Windows.Forms.Label();
+            this.cidadeOrigemLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.placaVeiculoLabel = new System.Windows.Forms.Label();
+            this.marcaVeiculoLabel = new System.Windows.Forms.Label();
+            this.modeloVeiculoLabel = new System.Windows.Forms.Label();
+            this.anoVeiculoLabel = new System.Windows.Forms.Label();
+            this.capacidadeVeiculoLabel = new System.Windows.Forms.Label();
+            this.corVeiculoLabel = new System.Windows.Forms.Label();
+            this.tipoCombustivelVeiculoLabel = new System.Windows.Forms.Label();
+            this.potenciaVeiculoLabel = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.placaVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anoVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacidadeVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoCombustivelVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.potenciaVeiculoGridCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxCadastrar.SuspendLayout();
             this.tabControlCadHist.SuspendLayout();
             this.Cadastros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cadastrosGrid)).BeginInit();
             this.Historico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historicoGrid)).BeginInit();
+            this.Veiculos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxCadastrar
             // 
+            this.groupBoxCadastrar.Controls.Add(this.cidadeOrigemLabel);
+            this.groupBoxCadastrar.Controls.Add(this.cartaoCreditoCadastroLabel);
+            this.groupBoxCadastrar.Controls.Add(this.txtCidadeOrigemCadastrar);
+            this.groupBoxCadastrar.Controls.Add(this.txtCartaoCreditoCadastrar);
             this.groupBoxCadastrar.Controls.Add(this.sexoCadastroLabel);
             this.groupBoxCadastrar.Controls.Add(this.emailCadastroLabel);
             this.groupBoxCadastrar.Controls.Add(this.telefoneCadastroLabel);
@@ -111,15 +148,15 @@
             this.groupBoxCadastrar.Controls.Add(this.salvarCadastroBtn);
             this.groupBoxCadastrar.Location = new System.Drawing.Point(12, 12);
             this.groupBoxCadastrar.Name = "groupBoxCadastrar";
-            this.groupBoxCadastrar.Size = new System.Drawing.Size(881, 118);
+            this.groupBoxCadastrar.Size = new System.Drawing.Size(881, 111);
             this.groupBoxCadastrar.TabIndex = 0;
             this.groupBoxCadastrar.TabStop = false;
-            this.groupBoxCadastrar.Text = "Cadastrar";
+            this.groupBoxCadastrar.Text = "Cadastrar Viagem";
             // 
             // sexoCadastroLabel
             // 
             this.sexoCadastroLabel.AutoSize = true;
-            this.sexoCadastroLabel.Location = new System.Drawing.Point(184, 69);
+            this.sexoCadastroLabel.Location = new System.Drawing.Point(544, 64);
             this.sexoCadastroLabel.Name = "sexoCadastroLabel";
             this.sexoCadastroLabel.Size = new System.Drawing.Size(31, 13);
             this.sexoCadastroLabel.TabIndex = 17;
@@ -128,7 +165,7 @@
             // emailCadastroLabel
             // 
             this.emailCadastroLabel.AutoSize = true;
-            this.emailCadastroLabel.Location = new System.Drawing.Point(6, 69);
+            this.emailCadastroLabel.Location = new System.Drawing.Point(4, 64);
             this.emailCadastroLabel.Name = "emailCadastroLabel";
             this.emailCadastroLabel.Size = new System.Drawing.Size(32, 13);
             this.emailCadastroLabel.TabIndex = 16;
@@ -137,7 +174,7 @@
             // telefoneCadastroLabel
             // 
             this.telefoneCadastroLabel.AutoSize = true;
-            this.telefoneCadastroLabel.Location = new System.Drawing.Point(547, 24);
+            this.telefoneCadastroLabel.Location = new System.Drawing.Point(364, 25);
             this.telefoneCadastroLabel.Name = "telefoneCadastroLabel";
             this.telefoneCadastroLabel.Size = new System.Drawing.Size(49, 13);
             this.telefoneCadastroLabel.TabIndex = 15;
@@ -146,7 +183,7 @@
             // enderecoCadastroLabel
             // 
             this.enderecoCadastroLabel.AutoSize = true;
-            this.enderecoCadastroLabel.Location = new System.Drawing.Point(364, 25);
+            this.enderecoCadastroLabel.Location = new System.Drawing.Point(544, 25);
             this.enderecoCadastroLabel.Name = "enderecoCadastroLabel";
             this.enderecoCadastroLabel.Size = new System.Drawing.Size(53, 13);
             this.enderecoCadastroLabel.TabIndex = 14;
@@ -155,7 +192,7 @@
             // cpfCadastroLabel
             // 
             this.cpfCadastroLabel.AutoSize = true;
-            this.cpfCadastroLabel.Location = new System.Drawing.Point(184, 25);
+            this.cpfCadastroLabel.Location = new System.Drawing.Point(4, 25);
             this.cpfCadastroLabel.Name = "cpfCadastroLabel";
             this.cpfCadastroLabel.Size = new System.Drawing.Size(27, 13);
             this.cpfCadastroLabel.TabIndex = 13;
@@ -164,7 +201,7 @@
             // nomeCadastroLabel
             // 
             this.nomeCadastroLabel.AutoSize = true;
-            this.nomeCadastroLabel.Location = new System.Drawing.Point(4, 25);
+            this.nomeCadastroLabel.Location = new System.Drawing.Point(185, 25);
             this.nomeCadastroLabel.Name = "nomeCadastroLabel";
             this.nomeCadastroLabel.Size = new System.Drawing.Size(35, 13);
             this.nomeCadastroLabel.TabIndex = 12;
@@ -172,49 +209,50 @@
             // 
             // txtEmailCadastrar
             // 
-            this.txtEmailCadastrar.Location = new System.Drawing.Point(6, 85);
+            this.txtEmailCadastrar.Location = new System.Drawing.Point(6, 80);
             this.txtEmailCadastrar.Name = "txtEmailCadastrar";
-            this.txtEmailCadastrar.Size = new System.Drawing.Size(174, 20);
-            this.txtEmailCadastrar.TabIndex = 11;
+            this.txtEmailCadastrar.Size = new System.Drawing.Size(175, 20);
+            this.txtEmailCadastrar.TabIndex = 5;
             // 
             // txtTelefoneCadastrar
             // 
-            this.txtTelefoneCadastrar.Location = new System.Drawing.Point(547, 41);
+            this.txtTelefoneCadastrar.Location = new System.Drawing.Point(367, 41);
             this.txtTelefoneCadastrar.MaxLength = 8;
             this.txtTelefoneCadastrar.Name = "txtTelefoneCadastrar";
             this.txtTelefoneCadastrar.Size = new System.Drawing.Size(174, 20);
-            this.txtTelefoneCadastrar.TabIndex = 10;
+            this.txtTelefoneCadastrar.TabIndex = 3;
             // 
             // txtEnderecoCadastrar
             // 
-            this.txtEnderecoCadastrar.Location = new System.Drawing.Point(367, 41);
+            this.txtEnderecoCadastrar.Location = new System.Drawing.Point(547, 41);
             this.txtEnderecoCadastrar.Name = "txtEnderecoCadastrar";
-            this.txtEnderecoCadastrar.Size = new System.Drawing.Size(174, 20);
-            this.txtEnderecoCadastrar.TabIndex = 9;
+            this.txtEnderecoCadastrar.Size = new System.Drawing.Size(324, 20);
+            this.txtEnderecoCadastrar.TabIndex = 4;
             // 
             // txtCPFCadastrar
             // 
-            this.txtCPFCadastrar.Location = new System.Drawing.Point(187, 41);
+            this.txtCPFCadastrar.Location = new System.Drawing.Point(7, 41);
             this.txtCPFCadastrar.MaxLength = 11;
             this.txtCPFCadastrar.Name = "txtCPFCadastrar";
             this.txtCPFCadastrar.Size = new System.Drawing.Size(174, 20);
-            this.txtCPFCadastrar.TabIndex = 8;
+            this.txtCPFCadastrar.TabIndex = 1;
+            this.txtCPFCadastrar.Validated += new System.EventHandler(this.txtCPFCadastrar_Validated);
             // 
             // txtNomeCadastrar
             // 
-            this.txtNomeCadastrar.Location = new System.Drawing.Point(6, 41);
+            this.txtNomeCadastrar.Location = new System.Drawing.Point(187, 41);
             this.txtNomeCadastrar.Name = "txtNomeCadastrar";
             this.txtNomeCadastrar.Size = new System.Drawing.Size(174, 20);
-            this.txtNomeCadastrar.TabIndex = 7;
+            this.txtNomeCadastrar.TabIndex = 2;
             // 
             // masculinoRadioBtn
             // 
             this.masculinoRadioBtn.AutoSize = true;
             this.masculinoRadioBtn.Checked = true;
-            this.masculinoRadioBtn.Location = new System.Drawing.Point(187, 88);
+            this.masculinoRadioBtn.Location = new System.Drawing.Point(547, 83);
             this.masculinoRadioBtn.Name = "masculinoRadioBtn";
             this.masculinoRadioBtn.Size = new System.Drawing.Size(73, 17);
-            this.masculinoRadioBtn.TabIndex = 5;
+            this.masculinoRadioBtn.TabIndex = 8;
             this.masculinoRadioBtn.TabStop = true;
             this.masculinoRadioBtn.Text = "Masculino";
             this.masculinoRadioBtn.UseVisualStyleBackColor = true;
@@ -222,20 +260,20 @@
             // femininoRadioBtn
             // 
             this.femininoRadioBtn.AutoSize = true;
-            this.femininoRadioBtn.Location = new System.Drawing.Point(266, 88);
+            this.femininoRadioBtn.Location = new System.Drawing.Point(626, 83);
             this.femininoRadioBtn.Name = "femininoRadioBtn";
             this.femininoRadioBtn.Size = new System.Drawing.Size(67, 17);
-            this.femininoRadioBtn.TabIndex = 3;
+            this.femininoRadioBtn.TabIndex = 9;
             this.femininoRadioBtn.TabStop = true;
             this.femininoRadioBtn.Text = "Feminino";
             this.femininoRadioBtn.UseVisualStyleBackColor = true;
             // 
             // salvarCadastroBtn
             // 
-            this.salvarCadastroBtn.Location = new System.Drawing.Point(727, 39);
+            this.salvarCadastroBtn.Location = new System.Drawing.Point(727, 77);
             this.salvarCadastroBtn.Name = "salvarCadastroBtn";
             this.salvarCadastroBtn.Size = new System.Drawing.Size(144, 23);
-            this.salvarCadastroBtn.TabIndex = 0;
+            this.salvarCadastroBtn.TabIndex = 10;
             this.salvarCadastroBtn.Text = "Salvar";
             this.salvarCadastroBtn.UseVisualStyleBackColor = true;
             this.salvarCadastroBtn.Click += new System.EventHandler(this.salvarCadastroBtn_Click);
@@ -244,11 +282,12 @@
             // 
             this.tabControlCadHist.Controls.Add(this.Cadastros);
             this.tabControlCadHist.Controls.Add(this.Historico);
-            this.tabControlCadHist.Location = new System.Drawing.Point(12, 136);
+            this.tabControlCadHist.Controls.Add(this.Veiculos);
+            this.tabControlCadHist.Location = new System.Drawing.Point(12, 371);
             this.tabControlCadHist.Name = "tabControlCadHist";
             this.tabControlCadHist.SelectedIndex = 0;
             this.tabControlCadHist.Size = new System.Drawing.Size(881, 432);
-            this.tabControlCadHist.TabIndex = 1;
+            this.tabControlCadHist.TabIndex = 11;
             // 
             // Cadastros
             // 
@@ -287,14 +326,14 @@
             this.cbModalidadeCadastros.Location = new System.Drawing.Point(506, 21);
             this.cbModalidadeCadastros.Name = "cbModalidadeCadastros";
             this.cbModalidadeCadastros.Size = new System.Drawing.Size(121, 21);
-            this.cbModalidadeCadastros.TabIndex = 10;
+            this.cbModalidadeCadastros.TabIndex = 4;
             // 
             // pesquisarCadastroBtn
             // 
             this.pesquisarCadastroBtn.Location = new System.Drawing.Point(633, 20);
             this.pesquisarCadastroBtn.Name = "pesquisarCadastroBtn";
             this.pesquisarCadastroBtn.Size = new System.Drawing.Size(104, 23);
-            this.pesquisarCadastroBtn.TabIndex = 4;
+            this.pesquisarCadastroBtn.TabIndex = 5;
             this.pesquisarCadastroBtn.Text = "Pesquisar";
             this.pesquisarCadastroBtn.UseVisualStyleBackColor = true;
             // 
@@ -330,18 +369,20 @@
             this.excluirCadastroBtn.Location = new System.Drawing.Point(792, 35);
             this.excluirCadastroBtn.Name = "excluirCadastroBtn";
             this.excluirCadastroBtn.Size = new System.Drawing.Size(75, 23);
-            this.excluirCadastroBtn.TabIndex = 6;
+            this.excluirCadastroBtn.TabIndex = 7;
             this.excluirCadastroBtn.Text = "Excluir";
             this.excluirCadastroBtn.UseVisualStyleBackColor = true;
+            this.excluirCadastroBtn.Click += new System.EventHandler(this.excluirCadastroBtn_Click);
             // 
             // editarCadastroBtn
             // 
             this.editarCadastroBtn.Location = new System.Drawing.Point(792, 6);
             this.editarCadastroBtn.Name = "editarCadastroBtn";
             this.editarCadastroBtn.Size = new System.Drawing.Size(75, 23);
-            this.editarCadastroBtn.TabIndex = 5;
+            this.editarCadastroBtn.TabIndex = 6;
             this.editarCadastroBtn.Text = "Editar";
             this.editarCadastroBtn.UseVisualStyleBackColor = true;
+            this.editarCadastroBtn.Click += new System.EventHandler(this.editarCadastroBtn_Click);
             // 
             // sexoComboBox
             // 
@@ -367,6 +408,9 @@
             // 
             // cadastrosGrid
             // 
+            this.cadastrosGrid.AllowUserToAddRows = false;
+            this.cadastrosGrid.AllowUserToDeleteRows = false;
+            this.cadastrosGrid.AllowUserToResizeRows = false;
             this.cadastrosGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.cadastrosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cadastrosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -381,6 +425,7 @@
             this.cadastrosGrid.Name = "cadastrosGrid";
             this.cadastrosGrid.Size = new System.Drawing.Size(861, 336);
             this.cadastrosGrid.TabIndex = 0;
+            this.cadastrosGrid.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.cadastrosGrid_RowValidated);
             // 
             // nome_CadGrid
             // 
@@ -443,7 +488,7 @@
             // modalidadeHistLabel
             // 
             this.modalidadeHistLabel.AutoSize = true;
-            this.modalidadeHistLabel.Location = new System.Drawing.Point(358, 38);
+            this.modalidadeHistLabel.Location = new System.Drawing.Point(357, 8);
             this.modalidadeHistLabel.Name = "modalidadeHistLabel";
             this.modalidadeHistLabel.Size = new System.Drawing.Size(62, 13);
             this.modalidadeHistLabel.TabIndex = 9;
@@ -452,7 +497,7 @@
             // placaHistLabel
             // 
             this.placaHistLabel.AutoSize = true;
-            this.placaHistLabel.Location = new System.Drawing.Point(183, 38);
+            this.placaHistLabel.Location = new System.Drawing.Point(182, 8);
             this.placaHistLabel.Name = "placaHistLabel";
             this.placaHistLabel.Size = new System.Drawing.Size(34, 13);
             this.placaHistLabel.TabIndex = 8;
@@ -461,7 +506,7 @@
             // cpfHistLabel
             // 
             this.cpfHistLabel.AutoSize = true;
-            this.cpfHistLabel.Location = new System.Drawing.Point(7, 38);
+            this.cpfHistLabel.Location = new System.Drawing.Point(6, 8);
             this.cpfHistLabel.Name = "cpfHistLabel";
             this.cpfHistLabel.Size = new System.Drawing.Size(27, 13);
             this.cpfHistLabel.TabIndex = 7;
@@ -470,52 +515,55 @@
             // cbModalidadeHist
             // 
             this.cbModalidadeHist.FormattingEnabled = true;
-            this.cbModalidadeHist.Location = new System.Drawing.Point(358, 57);
+            this.cbModalidadeHist.Location = new System.Drawing.Point(357, 27);
             this.cbModalidadeHist.Name = "cbModalidadeHist";
             this.cbModalidadeHist.Size = new System.Drawing.Size(155, 21);
-            this.cbModalidadeHist.TabIndex = 6;
+            this.cbModalidadeHist.TabIndex = 3;
             // 
             // pesquisarHistBtn
             // 
-            this.pesquisarHistBtn.Location = new System.Drawing.Point(792, 54);
+            this.pesquisarHistBtn.Location = new System.Drawing.Point(791, 25);
             this.pesquisarHistBtn.Name = "pesquisarHistBtn";
             this.pesquisarHistBtn.Size = new System.Drawing.Size(75, 23);
-            this.pesquisarHistBtn.TabIndex = 5;
+            this.pesquisarHistBtn.TabIndex = 6;
             this.pesquisarHistBtn.Text = "Pesquisar";
             this.pesquisarHistBtn.UseVisualStyleBackColor = true;
             // 
             // txtPlacaHistorico
             // 
-            this.txtPlacaHistorico.Location = new System.Drawing.Point(183, 57);
+            this.txtPlacaHistorico.Location = new System.Drawing.Point(182, 27);
             this.txtPlacaHistorico.Name = "txtPlacaHistorico";
             this.txtPlacaHistorico.Size = new System.Drawing.Size(169, 20);
-            this.txtPlacaHistorico.TabIndex = 4;
+            this.txtPlacaHistorico.TabIndex = 2;
             // 
             // txtCPFHistorico
             // 
-            this.txtCPFHistorico.Location = new System.Drawing.Point(7, 57);
+            this.txtCPFHistorico.Location = new System.Drawing.Point(6, 27);
             this.txtCPFHistorico.Name = "txtCPFHistorico";
             this.txtCPFHistorico.Size = new System.Drawing.Size(169, 20);
-            this.txtCPFHistorico.TabIndex = 3;
+            this.txtCPFHistorico.TabIndex = 1;
             // 
             // dataFinalHistorico
             // 
             this.dataFinalHistorico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataFinalHistorico.Location = new System.Drawing.Point(651, 57);
+            this.dataFinalHistorico.Location = new System.Drawing.Point(650, 27);
             this.dataFinalHistorico.Name = "dataFinalHistorico";
             this.dataFinalHistorico.Size = new System.Drawing.Size(125, 20);
-            this.dataFinalHistorico.TabIndex = 2;
+            this.dataFinalHistorico.TabIndex = 5;
             // 
             // dataInicialHistorico
             // 
             this.dataInicialHistorico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataInicialHistorico.Location = new System.Drawing.Point(520, 57);
+            this.dataInicialHistorico.Location = new System.Drawing.Point(519, 27);
             this.dataInicialHistorico.Name = "dataInicialHistorico";
             this.dataInicialHistorico.Size = new System.Drawing.Size(125, 20);
-            this.dataInicialHistorico.TabIndex = 1;
+            this.dataInicialHistorico.TabIndex = 4;
             // 
             // historicoGrid
             // 
+            this.historicoGrid.AllowUserToAddRows = false;
+            this.historicoGrid.AllowUserToDeleteRows = false;
+            this.historicoGrid.AllowUserToResizeRows = false;
             this.historicoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.historicoGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cpfMot_HistGrid,
@@ -529,9 +577,9 @@
             this.formaPagto_HistGrid,
             this.valor_HistGrid,
             this.cancelamento_HistGrid});
-            this.historicoGrid.Location = new System.Drawing.Point(7, 83);
+            this.historicoGrid.Location = new System.Drawing.Point(6, 54);
             this.historicoGrid.Name = "historicoGrid";
-            this.historicoGrid.Size = new System.Drawing.Size(860, 317);
+            this.historicoGrid.Size = new System.Drawing.Size(861, 346);
             this.historicoGrid.TabIndex = 0;
             // 
             // cpfMot_HistGrid
@@ -600,11 +648,277 @@
             this.cancelamento_HistGrid.Name = "cancelamento_HistGrid";
             this.cancelamento_HistGrid.ReadOnly = true;
             // 
+            // Veiculos
+            // 
+            this.Veiculos.Controls.Add(this.dataGridView1);
+            this.Veiculos.Controls.Add(this.button1);
+            this.Veiculos.Controls.Add(this.comboBox2);
+            this.Veiculos.Controls.Add(this.comboBox1);
+            this.Veiculos.Controls.Add(this.potenciaVeiculoLabel);
+            this.Veiculos.Controls.Add(this.tipoCombustivelVeiculoLabel);
+            this.Veiculos.Controls.Add(this.corVeiculoLabel);
+            this.Veiculos.Controls.Add(this.capacidadeVeiculoLabel);
+            this.Veiculos.Controls.Add(this.anoVeiculoLabel);
+            this.Veiculos.Controls.Add(this.modeloVeiculoLabel);
+            this.Veiculos.Controls.Add(this.marcaVeiculoLabel);
+            this.Veiculos.Controls.Add(this.placaVeiculoLabel);
+            this.Veiculos.Controls.Add(this.textBox8);
+            this.Veiculos.Controls.Add(this.textBox6);
+            this.Veiculos.Controls.Add(this.textBox4);
+            this.Veiculos.Controls.Add(this.textBox3);
+            this.Veiculos.Controls.Add(this.textBox2);
+            this.Veiculos.Controls.Add(this.textBox1);
+            this.Veiculos.Location = new System.Drawing.Point(4, 22);
+            this.Veiculos.Name = "Veiculos";
+            this.Veiculos.Size = new System.Drawing.Size(873, 406);
+            this.Veiculos.TabIndex = 2;
+            this.Veiculos.Text = "Veículos";
+            this.Veiculos.UseVisualStyleBackColor = true;
+            // 
+            // txtCartaoCreditoCadastrar
+            // 
+            this.txtCartaoCreditoCadastrar.Location = new System.Drawing.Point(367, 80);
+            this.txtCartaoCreditoCadastrar.Name = "txtCartaoCreditoCadastrar";
+            this.txtCartaoCreditoCadastrar.Size = new System.Drawing.Size(174, 20);
+            this.txtCartaoCreditoCadastrar.TabIndex = 7;
+            // 
+            // txtCidadeOrigemCadastrar
+            // 
+            this.txtCidadeOrigemCadastrar.Location = new System.Drawing.Point(187, 80);
+            this.txtCidadeOrigemCadastrar.Name = "txtCidadeOrigemCadastrar";
+            this.txtCidadeOrigemCadastrar.Size = new System.Drawing.Size(174, 20);
+            this.txtCidadeOrigemCadastrar.TabIndex = 6;
+            // 
+            // cartaoCreditoCadastroLabel
+            // 
+            this.cartaoCreditoCadastroLabel.AutoSize = true;
+            this.cartaoCreditoCadastroLabel.Location = new System.Drawing.Point(364, 64);
+            this.cartaoCreditoCadastroLabel.Name = "cartaoCreditoCadastroLabel";
+            this.cartaoCreditoCadastroLabel.Size = new System.Drawing.Size(89, 13);
+            this.cartaoCreditoCadastroLabel.TabIndex = 20;
+            this.cartaoCreditoCadastroLabel.Text = "Cartão de Crédito";
+            // 
+            // cidadeOrigemLabel
+            // 
+            this.cidadeOrigemLabel.AutoSize = true;
+            this.cidadeOrigemLabel.Location = new System.Drawing.Point(184, 64);
+            this.cidadeOrigemLabel.Name = "cidadeOrigemLabel";
+            this.cidadeOrigemLabel.Size = new System.Drawing.Size(91, 13);
+            this.cidadeOrigemLabel.TabIndex = 21;
+            this.cidadeOrigemLabel.Text = "Cidade de Origem";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(99, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(112, 27);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(218, 27);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(324, 27);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(65, 20);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(462, 26);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(91, 20);
+            this.textBox6.TabIndex = 6;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(664, 26);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(91, 20);
+            this.textBox8.TabIndex = 8;
+            // 
+            // placaVeiculoLabel
+            // 
+            this.placaVeiculoLabel.AutoSize = true;
+            this.placaVeiculoLabel.Location = new System.Drawing.Point(7, 8);
+            this.placaVeiculoLabel.Name = "placaVeiculoLabel";
+            this.placaVeiculoLabel.Size = new System.Drawing.Size(34, 13);
+            this.placaVeiculoLabel.TabIndex = 1;
+            this.placaVeiculoLabel.Text = "Placa";
+            // 
+            // marcaVeiculoLabel
+            // 
+            this.marcaVeiculoLabel.AutoSize = true;
+            this.marcaVeiculoLabel.Location = new System.Drawing.Point(109, 8);
+            this.marcaVeiculoLabel.Name = "marcaVeiculoLabel";
+            this.marcaVeiculoLabel.Size = new System.Drawing.Size(37, 13);
+            this.marcaVeiculoLabel.TabIndex = 1;
+            this.marcaVeiculoLabel.Text = "Marca";
+            // 
+            // modeloVeiculoLabel
+            // 
+            this.modeloVeiculoLabel.AutoSize = true;
+            this.modeloVeiculoLabel.Location = new System.Drawing.Point(215, 8);
+            this.modeloVeiculoLabel.Name = "modeloVeiculoLabel";
+            this.modeloVeiculoLabel.Size = new System.Drawing.Size(42, 13);
+            this.modeloVeiculoLabel.TabIndex = 1;
+            this.modeloVeiculoLabel.Text = "Modelo";
+            // 
+            // anoVeiculoLabel
+            // 
+            this.anoVeiculoLabel.AutoSize = true;
+            this.anoVeiculoLabel.Location = new System.Drawing.Point(321, 8);
+            this.anoVeiculoLabel.Name = "anoVeiculoLabel";
+            this.anoVeiculoLabel.Size = new System.Drawing.Size(26, 13);
+            this.anoVeiculoLabel.TabIndex = 1;
+            this.anoVeiculoLabel.Text = "Ano";
+            // 
+            // capacidadeVeiculoLabel
+            // 
+            this.capacidadeVeiculoLabel.AutoSize = true;
+            this.capacidadeVeiculoLabel.Location = new System.Drawing.Point(392, 7);
+            this.capacidadeVeiculoLabel.Name = "capacidadeVeiculoLabel";
+            this.capacidadeVeiculoLabel.Size = new System.Drawing.Size(64, 13);
+            this.capacidadeVeiculoLabel.TabIndex = 1;
+            this.capacidadeVeiculoLabel.Text = "Capacidade";
+            // 
+            // corVeiculoLabel
+            // 
+            this.corVeiculoLabel.AutoSize = true;
+            this.corVeiculoLabel.Location = new System.Drawing.Point(459, 7);
+            this.corVeiculoLabel.Name = "corVeiculoLabel";
+            this.corVeiculoLabel.Size = new System.Drawing.Size(23, 13);
+            this.corVeiculoLabel.TabIndex = 1;
+            this.corVeiculoLabel.Text = "Cor";
+            // 
+            // tipoCombustivelVeiculoLabel
+            // 
+            this.tipoCombustivelVeiculoLabel.AutoSize = true;
+            this.tipoCombustivelVeiculoLabel.Location = new System.Drawing.Point(556, 7);
+            this.tipoCombustivelVeiculoLabel.Name = "tipoCombustivelVeiculoLabel";
+            this.tipoCombustivelVeiculoLabel.Size = new System.Drawing.Size(90, 13);
+            this.tipoCombustivelVeiculoLabel.TabIndex = 1;
+            this.tipoCombustivelVeiculoLabel.Text = "Tipo Combustível";
+            // 
+            // potenciaVeiculoLabel
+            // 
+            this.potenciaVeiculoLabel.AutoSize = true;
+            this.potenciaVeiculoLabel.Location = new System.Drawing.Point(661, 7);
+            this.potenciaVeiculoLabel.Name = "potenciaVeiculoLabel";
+            this.potenciaVeiculoLabel.Size = new System.Drawing.Size(94, 13);
+            this.potenciaVeiculoLabel.TabIndex = 1;
+            this.potenciaVeiculoLabel.Text = "Potência do Motor";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(395, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(61, 21);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(559, 26);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(99, 21);
+            this.comboBox2.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(761, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.placaVeiculoGridCol,
+            this.marcaVeiculoGridCol,
+            this.modeloVeiculoGridCol,
+            this.anoVeiculoGridCol,
+            this.capacidadeVeiculoGridCol,
+            this.corVeiculoGridCol,
+            this.tipoCombustivelVeiculoGridCol,
+            this.potenciaVeiculoGridCol});
+            this.dataGridView1.Location = new System.Drawing.Point(7, 54);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(855, 346);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // placaVeiculoGridCol
+            // 
+            this.placaVeiculoGridCol.HeaderText = "Placa";
+            this.placaVeiculoGridCol.Name = "placaVeiculoGridCol";
+            this.placaVeiculoGridCol.ReadOnly = true;
+            // 
+            // marcaVeiculoGridCol
+            // 
+            this.marcaVeiculoGridCol.HeaderText = "Marca";
+            this.marcaVeiculoGridCol.Name = "marcaVeiculoGridCol";
+            this.marcaVeiculoGridCol.ReadOnly = true;
+            // 
+            // modeloVeiculoGridCol
+            // 
+            this.modeloVeiculoGridCol.HeaderText = "Modelo";
+            this.modeloVeiculoGridCol.Name = "modeloVeiculoGridCol";
+            this.modeloVeiculoGridCol.ReadOnly = true;
+            // 
+            // anoVeiculoGridCol
+            // 
+            this.anoVeiculoGridCol.HeaderText = "Ano";
+            this.anoVeiculoGridCol.Name = "anoVeiculoGridCol";
+            this.anoVeiculoGridCol.ReadOnly = true;
+            // 
+            // capacidadeVeiculoGridCol
+            // 
+            this.capacidadeVeiculoGridCol.HeaderText = "Capacidade";
+            this.capacidadeVeiculoGridCol.Name = "capacidadeVeiculoGridCol";
+            this.capacidadeVeiculoGridCol.ReadOnly = true;
+            // 
+            // corVeiculoGridCol
+            // 
+            this.corVeiculoGridCol.HeaderText = "Cor";
+            this.corVeiculoGridCol.Name = "corVeiculoGridCol";
+            this.corVeiculoGridCol.ReadOnly = true;
+            // 
+            // tipoCombustivelVeiculoGridCol
+            // 
+            this.tipoCombustivelVeiculoGridCol.HeaderText = "Tipo de Combustível";
+            this.tipoCombustivelVeiculoGridCol.Name = "tipoCombustivelVeiculoGridCol";
+            this.tipoCombustivelVeiculoGridCol.ReadOnly = true;
+            // 
+            // potenciaVeiculoGridCol
+            // 
+            this.potenciaVeiculoGridCol.HeaderText = "Potência do Motor";
+            this.potenciaVeiculoGridCol.Name = "potenciaVeiculoGridCol";
+            this.potenciaVeiculoGridCol.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 580);
+            this.ClientSize = new System.Drawing.Size(906, 815);
             this.Controls.Add(this.tabControlCadHist);
             this.Controls.Add(this.groupBoxCadastrar);
             this.Name = "Form1";
@@ -619,6 +933,9 @@
             this.Historico.ResumeLayout(false);
             this.Historico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historicoGrid)).EndInit();
+            this.Veiculos.ResumeLayout(false);
+            this.Veiculos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -682,6 +999,37 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone_CadGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo_CadGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn email_CadGrid;
+        private System.Windows.Forms.TabPage Veiculos;
+        private System.Windows.Forms.Label cartaoCreditoCadastroLabel;
+        private System.Windows.Forms.TextBox txtCidadeOrigemCadastrar;
+        private System.Windows.Forms.TextBox txtCartaoCreditoCadastrar;
+        private System.Windows.Forms.Label cidadeOrigemLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label potenciaVeiculoLabel;
+        private System.Windows.Forms.Label tipoCombustivelVeiculoLabel;
+        private System.Windows.Forms.Label corVeiculoLabel;
+        private System.Windows.Forms.Label capacidadeVeiculoLabel;
+        private System.Windows.Forms.Label anoVeiculoLabel;
+        private System.Windows.Forms.Label modeloVeiculoLabel;
+        private System.Windows.Forms.Label marcaVeiculoLabel;
+        private System.Windows.Forms.Label placaVeiculoLabel;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placaVeiculoGridCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaVeiculoGridCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modeloVeiculoGridCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anoVeiculoGridCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacidadeVeiculoGridCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn corVeiculoGridCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoCombustivelVeiculoGridCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn potenciaVeiculoGridCol;
     }
 }
 
