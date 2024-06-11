@@ -1,18 +1,17 @@
 ﻿using Domain;
 using Npgsql;
+using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository.Interfaces
+namespace Repository
 {
-    public class PessoaRepository : BaseRepository, IPessoaRepository
+    public class PassageiroRepository : BaseRepository, IPassageiroRepository
     {
-        public PessoaRepository() { }
-
-        public void Create(Pessoa pessoa)
+        public void Create(Passageiro passageiro)
         {
             DatabaseConnection dbConnection = new DatabaseConnection();
 
@@ -20,17 +19,15 @@ namespace Repository.Interfaces
             {
                 dbConnection.OpenConnection(connection);
 
-                var query = "INSERT INTO PESSOAS (cpf_pessoa, nome, endereco, telefone, sexo, email) " +
-                            "VALUES (@Cpf, @Nome, @Endereco, @Telefone, @Sexo, @Email)";
+                var query = "INSERT INTO PASSAGEIROS (cpf_passag, cartao_cred, bandeira_cartao, cidade_orig) " +
+                            "VALUES (@Cpf, @CartaoCred, @BandeiraCartao, @CidadeOrig)";
 
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("Cpf", pessoa.Cpf);
-                    cmd.Parameters.AddWithValue("Nome", pessoa.Nome);
-                    cmd.Parameters.AddWithValue("Endereco", pessoa.Endereco);
-                    cmd.Parameters.AddWithValue("Telefone", pessoa.Telefone);
-                    cmd.Parameters.AddWithValue("Sexo", pessoa.Sexo.ToString());
-                    cmd.Parameters.AddWithValue("Email", pessoa.Email);
+                    cmd.Parameters.AddWithValue("Cpf", passageiro.Cpf);
+                    cmd.Parameters.AddWithValue("CartaoCred", passageiro.CartaoCred);
+                    cmd.Parameters.AddWithValue("BandeiraCartao", passageiro.BandeiraCartao);
+                    cmd.Parameters.AddWithValue("CidadeOrig", passageiro.CidadeOrig);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -47,7 +44,8 @@ namespace Repository.Interfaces
             {
                 dbConnection.OpenConnection(connection);
 
-                var query = "DELETE FROM PESSOAS WHERE cpf_pessoa = @Cpf";
+                // verificar nome da coluna CPF
+                var query = "DELETE FROM PASSAGEIROS WHERE cpf_passag = @Cpf";
 
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
@@ -60,16 +58,16 @@ namespace Repository.Interfaces
             }
         }
 
-        public IEnumerable<Pessoa> Get()
+        public IEnumerable<Passageiro> Get()
         {
             DatabaseConnection dbConnection = new DatabaseConnection();
-            List<Pessoa> pessoaList = new List<Pessoa>();
+            List<Passageiro> passageirosList = new List<Passageiro>();
 
             using (var connection = dbConnection.GetConnection())
             {
                 dbConnection.OpenConnection(connection);
 
-                var query = "SELECT * FROM PESSOAS";
+                var query = "SELECT * FROM PASSAGEIROS";
 
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
@@ -77,17 +75,15 @@ namespace Repository.Interfaces
                     {
                         while (reader.Read())
                         {
-                            var pessoa = new Pessoa
+                            var passageiro = new Passageiro
                             {
-                                Cpf = Convert.ToInt64(reader["cpf_pessoa"]),
-                                Nome = reader["nome"].ToString(),
-                                Email = reader["email"].ToString(),
-                                Endereco = reader["endereco"].ToString(),
-                                Sexo = (Sexo)Enum.Parse(typeof(Sexo), reader["sexo"].ToString()),
-                                Telefone = Convert.ToInt32(reader["telefone"])
+                                Cpf = Convert.ToInt64(reader["cpf_passag"]),
+                                CidadeOrig = reader["cidade_orig"].ToString(),
+                                CartaoCred = reader["cartao_cred"].ToString(),
+                                BandeiraCartao = reader["bandeira_cartao"].ToString()
                             };
 
-                            pessoaList.Add(pessoa);
+                            passageirosList.Add(passageiro);
                         }
                     }
                 }
@@ -95,19 +91,19 @@ namespace Repository.Interfaces
                 dbConnection.CloseConnection(connection);
             }
 
-            return pessoaList;
+            return passageirosList;
         }
 
-        public Pessoa Get(long cpf)
+        public Passageiro Get(long cpf)
         {
             DatabaseConnection dbConnection = new DatabaseConnection();
-            var pessoa = new Pessoa();
+            var passageiro = new Passageiro();
 
             using (var connection = dbConnection.GetConnection())
             {
                 dbConnection.OpenConnection(connection);
 
-                var query = "SELECT * FROM PESSOAS WHERE cpf_pessoa = @Cpf";
+                var query = "SELECT * FROM PASSAGEIROS WHERE cpf_passag = @Cpf";
 
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
@@ -117,14 +113,12 @@ namespace Repository.Interfaces
                     {
                         while (reader.Read())
                         {
-                            pessoa = new Pessoa
+                            passageiro = new Passageiro
                             {
-                                Cpf = Convert.ToInt64(reader["cpf_pessoa"]),
-                                Nome = reader["nome"].ToString(),
-                                Email = reader["email"].ToString(),
-                                Endereco = reader["endereco"].ToString(),
-                                Sexo = (Sexo)Enum.Parse(typeof(Sexo), reader["sexo"].ToString()),
-                                Telefone = Convert.ToInt32(reader["telefone"])
+                                Cpf = Convert.ToInt64(reader["cpf_passag"]),
+                                BandeiraCartao = reader["bandeira_cartao"].ToString(),
+                                CartaoCred = reader["cartao_cred"].ToString(),
+                                CidadeOrig = reader["cidade_orig"].ToString(),
                             };
                         }
                     }
@@ -133,10 +127,10 @@ namespace Repository.Interfaces
                 dbConnection.CloseConnection(connection);
             }
 
-            return pessoa;
+            return passageiro;
         }
 
-        public void Update(Pessoa pessoa)
+        public void Update(Passageiro passageiro)
         {
             DatabaseConnection dbConnection = new DatabaseConnection();
 
@@ -144,18 +138,16 @@ namespace Repository.Interfaces
             {
                 dbConnection.OpenConnection(connection);
 
-                var query = "UPDATE PESSOAS SET nome = @Nome, endereco = @Endereco," +
-                            "telefone = @Telefone, sexo = @Sexo, email = @Email" +
-                            "WHERE cpf_pessoa = @Cpf";
+                // verificar nome das colunas
+                var query = "UPDATE PASSAGEIROS SET cpf_passag = @Cpf, cartao_cred = @CartaoCred, bandeira_cartao = @BandeiraCartao, cidade_orig = @CidadeOrig" +
+                            "WHERE cpf_passag = @Cpf";
 
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("Cpf", pessoa.Cpf);
-                    cmd.Parameters.AddWithValue("Nome", pessoa.Nome);
-                    cmd.Parameters.AddWithValue("Endereco", pessoa.Endereco);
-                    cmd.Parameters.AddWithValue("Telefone", pessoa.Telefone);
-                    cmd.Parameters.AddWithValue("Sexo", pessoa.Sexo.ToString());
-                    cmd.Parameters.AddWithValue("Email", pessoa.Email);
+                    cmd.Parameters.AddWithValue("Cpf", passageiro.Cpf);
+                    cmd.Parameters.AddWithValue("CidadeOrig", passageiro.CidadeOrig);
+                    cmd.Parameters.AddWithValue("BandeiraCartao", passageiro.BandeiraCartao);
+                    cmd.Parameters.AddWithValue("CartaoCred", passageiro.CartaoCred);
 
                     cmd.ExecuteNonQuery();
                 }
