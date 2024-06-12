@@ -94,8 +94,12 @@
     <Compile Include="BaseRepository.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Interfaces\IBaseRepository.cs" />
+    <Compile Include="Interfaces\IMotoristaRepository.cs" />
     <Compile Include="Interfaces\IPassageiroRepository.cs" />
     <Compile Include="Interfaces\IPessoaRepository.cs" />
+    <Compile Include="Interfaces\IProprietarioRepository.cs" />
+    <Compile Include="Interfaces\IVeiculoRepository.cs" />
+    <Compile Include="Interfaces\IViagemRepository.cs" />
     <Compile Include="Models\Motorista.cs" />
     <Compile Include="Models\Passageiro.cs" />
     <Compile Include="Models\Pessoa.cs" />
@@ -103,9 +107,13 @@
     <Compile Include="Models\TipoPagamento.cs" />
     <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Models\Viagem.cs" />
+    <Compile Include="MotoristaRepository.cs" />
     <Compile Include="PassageiroRepository.cs" />
     <Compile Include="PessoaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProprietarioRepository.cs" />
+    <Compile Include="VeiculoRepository.cs" />
+    <Compile Include="ViagemRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

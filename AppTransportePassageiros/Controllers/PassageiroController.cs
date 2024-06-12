@@ -4,7 +4,7 @@ using System.Linq;
 using Repository;
 using Repository.Models;
 
-namespace Domain
+namespace Domain.Controllers
 {
     public class PassageiroController
     {
